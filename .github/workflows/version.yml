@@ -1,0 +1,38 @@
+name: Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GIT_EMAIL: ${{ secrets.GIT_EMAIL}}
+      GIT_USER: ${{ secrets.GIT_USER }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: npm install, build, and test
+        run: |
+          npm install yarn -g
+          yarn --pure-lockfile
+          npx lerna run start
+      - name: git checkout PR
+        run: |
+          git config --global user.name $GIT_USER
+          git config --global user.email $GIT_EMAIL
+          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
+          git checkout $GITHUB_HEAD_REF
+      - name: lerna version
+        run: |
+          npx lerna version --yes --no-commit-hooks --no-push -m "chore: updated package versions"
+      - name: Push changes
+        run: |
+          git status
+          git push --follow-tags
