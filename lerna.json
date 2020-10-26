@@ -2,11 +2,11 @@
   "packages": [
     "packages/*"
   ],
+  "lerna": "3.19.0",
   "version": "independent",
   "command": {
-    "publish" : {
+    "publish": {
       "conventionalCommits": true
     }
-  },
-  "useWorkspaces": true
+  }
 }

@@ -2,13 +2,7 @@
   "name": "test-monorepo",
   "private": true,
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
-    "eslint": "^3.19.0",
-    "eslint-plugin-vue": "^7.1.0",
-    "jest": "^20.0.4",
-    "lerna": "^2.0.0",
-    "node": "^15.0.1"
+    "lerna": "3.19.0"
   },
   "workspaces": [
     "packages/*"
