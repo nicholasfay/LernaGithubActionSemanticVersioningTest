@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/nicholasfay/LernaGithubActionSemanticVersioningTest/compare/apple@2.0.0...apple@2.1.0) (2020-10-26)
+
+
+### Features
+
+* test2 ([10ad348](https://github.com/nicholasfay/LernaGithubActionSemanticVersioningTest/commit/10ad348ded1046c6d6e581670d7d5a321ddf4080))
+
+
+
+
+
 # [2.0.0](https://github.com/nicholasfay/LernaGithubActionSemanticVersioningTest/compare/apple@1.0.3...apple@2.0.0) (2020-10-26)
 
 
