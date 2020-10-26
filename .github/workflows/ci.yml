@@ -15,8 +15,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install, start, and test
+      - name: npm install, start
         run: |
           npm install yarn -g
           yarn --pure-lockfile
-          lerna run start
+          npx lerna run start
