@@ -15,11 +15,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install, build, and test
+      - name: npm install, start, and test
         run: |
           npm install yarn -g
           yarn --pure-lockfile
-          npx lerna run build
+          npx lerna run start
       - name: git checkout PR
         run: |
           git config --global user.name $GIT_USER
