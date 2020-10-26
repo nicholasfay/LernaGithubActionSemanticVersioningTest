@@ -7,6 +7,5 @@
     "publish" : {
       "conventionalCommits": true
     }
-  },
-  "useWorkspaces": true
+  }
 }
