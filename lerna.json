@@ -4,7 +4,7 @@
   ],
   "version": "independent",
   "command": {
-    "publish" : {
+    "publish": {
       "conventionalCommits": true
     }
   }
